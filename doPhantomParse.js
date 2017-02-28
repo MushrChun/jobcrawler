@@ -11,8 +11,6 @@ function parse(content) {
   if (zeroResult.length !== 0) {
     return false;
   }
-
-  const searchResult = $('div[data-automation="searchResults"]');
   const jobArticles = $('div._365Hwu1').children();
   jobArticles.each(function getLocation(i, elem) {
     console.log(`Title: ${elem.attribs['aria-label']}`);
@@ -31,7 +29,9 @@ function parse(content) {
 
   return true;
 }
-
+/*
+* for test aim
+*/
 function readFile() {
   fs.readFile('result.html', 'utf-8', (err, data) => {
     if (err) {

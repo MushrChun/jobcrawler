@@ -1,10 +1,9 @@
 const phantom = require('phantom');
-const cheerio = require('cheerio');
-const fs = require('fs');
-const doParse = require('./doParse');
+const doParse = require('./doPhantomParse');
 
 let mPage;
 let mInstance;
+const urlToVisit = 'https://www.seek.com.au/jobs?keywords=developer/';
 
 function exit() {
   mPage.close();
@@ -23,7 +22,7 @@ phantom.create()
   })
   .then((page) => {
     mPage = page;
-    return page.open('https://www.seek.com.au/jobs?keywords=developer/');
+    return page.open(urlToVisit);
   })
   .then((status) => {
     console.log(status);
