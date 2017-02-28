@@ -1,0 +1,22 @@
+{
+  "name": "job-seeker",
+  "version": "0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "author": "MushrChun",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "phantom": "^4.0.0",
+    "request": "^2.79.0",
+    "url-parse": "^1.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
